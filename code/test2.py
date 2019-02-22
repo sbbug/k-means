@@ -3,15 +3,15 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("../data/customer.txt",sep=',',header=None,names = ["A","B","C"])
+data = pd.read_csv("../data/data.txt",sep=',',header=None,)
 print(data)
-# x = data.as_matrix()
-#
-# # 传入要分类的数目
-# kms = KMeans(n_clusters=2)
-# y = kms.fit_predict(x)
-# print(y)
-# print(kms.labels_)
+x = data.as_matrix()
+
+# 传入要分类的数目
+kms = KMeans(n_clusters=2)
+y = kms.fit_predict(x)
+print(y)
+print(kms.labels_)
 # label=kms.labels_
 #
 # pca = PCA(n_components=2)
